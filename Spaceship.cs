@@ -17,6 +17,9 @@ namespace Tregnago_Hugo_Tp1
         public int CurrentStructure { get; set; }
         public int CurrentShield { get; set; }
         private List<Weapon> Weapons { get; set; }
+        //Currently, all spaceships have the same armory.
+        //My idea is that each spaceship will have a limited armory depending on their stats (for balance)
+        //Also this armory will depend on the SpaceInvaders general armory, like a draft league
         private Armory SpaceshipArmory { get; set; }
         public bool IsDestroyed
         {
