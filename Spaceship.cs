@@ -17,7 +17,7 @@ namespace Tregnago_Hugo_Tp1
         public int CurrentStructure { get; set; }
         public int CurrentShield { get; set; }
         private List<Weapon> Weapons { get; set; }
-        private Armory Armory { get; set; }
+        private Armory SpaceshipArmory { get; set; }
         public bool IsDestroyed
         {
             get
@@ -32,12 +32,12 @@ namespace Tregnago_Hugo_Tp1
             CurrentStructure = maxStructure;
             CurrentShield = maxShield;
             Weapons = new List<Weapon>();
-            Armory = new Armory();
+            SpaceshipArmory = new Armory();
         }
         public Spaceship() : this(DEFAULT_MAX_STRUCTURE, DEFAULT_MAX_SHIELD) { }
         public void AddWeapon(Weapon weapon)
         {
-            if (!Armory.Weapons.Contains(weapon))
+            if (!SpaceshipArmory.Weapons.Contains(weapon))
                 throw new ArmoryException("This spaceship cannot add a weapon not inside his armory.");
             if (Weapons.Count < MAX_WEAPONS)
                 Weapons.Add(weapon);

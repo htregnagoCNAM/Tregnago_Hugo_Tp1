@@ -38,7 +38,7 @@ namespace Tregnago_Hugo_Tp1
         {
             Spaceship = spaceship;
         }
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj == null || GetType() != obj.GetType())
                 return false;

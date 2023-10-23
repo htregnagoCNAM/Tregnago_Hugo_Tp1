@@ -9,18 +9,18 @@ namespace Tregnago_Hugo_Tp1
     public class SpaceInvaders
     {
         private List<Player> Players;
-        private Armory Armory;
+        private Armory GeneralArmory;
         public SpaceInvaders()
         {
             Players = new List<Player>();
-            Armory = new Armory();
+            GeneralArmory = new Armory();
             Init();
         }
         public static void Main()
         {
             SpaceInvaders game = new SpaceInvaders();
             game.DisplayAllPlayers();
-            game.Armory.ViewArmory();
+            game.GeneralArmory.ViewArmory();
             game.DisplayPlayerDetailedInformations(0);
             game.DisplayPlayerDetailedInformations(1);
             game.DisplayPlayerDetailedInformations(2);
@@ -37,23 +37,23 @@ namespace Tregnago_Hugo_Tp1
         private void InitPlayer1SpaceShip()
         {
             Players[0].AssignSpaceship(new Spaceship(150, 50));
-            Players[0].Spaceship.AddWeapon(Armory.Weapons[2]);
-            Players[0].Spaceship.AddWeapon(Armory.Weapons[5]);
-            Players[0].Spaceship.AddWeapon(Armory.Weapons[7]);
+            Players[0].Spaceship.AddWeapon(GeneralArmory.Weapons[2]);
+            Players[0].Spaceship.AddWeapon(GeneralArmory.Weapons[5]);
+            Players[0].Spaceship.AddWeapon(GeneralArmory.Weapons[7]);
         }
         private void InitPlayer2SpaceShip()
         {
             Players[1].AssignSpaceship(new Spaceship(140, 70));
-            Players[1].Spaceship.AddWeapon(Armory.Weapons[4]);
-            Players[1].Spaceship.AddWeapon(Armory.Weapons[8]);
-            Players[1].Spaceship.AddWeapon(Armory.Weapons[13]);
+            Players[1].Spaceship.AddWeapon(GeneralArmory.Weapons[4]);
+            Players[1].Spaceship.AddWeapon(GeneralArmory.Weapons[8]);
+            Players[1].Spaceship.AddWeapon(GeneralArmory.Weapons[13]);
         }
         private void InitPlayer3SpaceShip()
         {
             Players[2].AssignSpaceship(new Spaceship(200, 0));
-            Players[2].Spaceship.AddWeapon(Armory.Weapons[0]);
-            Players[2].Spaceship.AddWeapon(Armory.Weapons[9]);
-            Players[2].Spaceship.AddWeapon(Armory.Weapons[15]);
+            Players[2].Spaceship.AddWeapon(GeneralArmory.Weapons[0]);
+            Players[2].Spaceship.AddWeapon(GeneralArmory.Weapons[9]);
+            Players[2].Spaceship.AddWeapon(GeneralArmory.Weapons[15]);
         }
         public void DisplayAllPlayers()
         {

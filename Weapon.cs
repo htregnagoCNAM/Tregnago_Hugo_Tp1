@@ -20,7 +20,7 @@ namespace Tregnago_Hugo_Tp1
             MaxDamage = maxDamage;
             WeaponType = weaponType;
         }
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj == null || GetType() != obj.GetType())
                 return false;
@@ -30,6 +30,11 @@ namespace Tregnago_Hugo_Tp1
                 MinDamage == otherWeapon.MinDamage &&
                 MaxDamage == otherWeapon.MaxDamage &&
                 WeaponType == otherWeapon.WeaponType;
+        }
+
+        public override int GetHashCode()
+        {
+            throw new NotImplementedException();
         }
     }
     public enum EWeaponType
