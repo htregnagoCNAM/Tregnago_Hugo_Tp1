@@ -36,21 +36,21 @@ namespace Tregnago_Hugo_Tp1
         }
         private void InitPlayer1SpaceShip()
         {
-            Players[0].AssignSpaceship(new Spaceship(150, 50));
+            Players[0].Spaceship = new Spaceship(150, 50);
             Players[0].Spaceship.AddWeapon(GeneralArmory.Weapons[2]);
             Players[0].Spaceship.AddWeapon(GeneralArmory.Weapons[5]);
             Players[0].Spaceship.AddWeapon(GeneralArmory.Weapons[7]);
         }
         private void InitPlayer2SpaceShip()
         {
-            Players[1].AssignSpaceship(new Spaceship(140, 70));
+            Players[1].Spaceship = new Spaceship(140, 70);
             Players[1].Spaceship.AddWeapon(GeneralArmory.Weapons[4]);
             Players[1].Spaceship.AddWeapon(GeneralArmory.Weapons[8]);
             Players[1].Spaceship.AddWeapon(GeneralArmory.Weapons[13]);
         }
         private void InitPlayer3SpaceShip()
         {
-            Players[2].AssignSpaceship(new Spaceship(200, 0));
+            Players[2].Spaceship = new Spaceship(200, 0);
             Players[2].Spaceship.AddWeapon(GeneralArmory.Weapons[0]);
             Players[2].Spaceship.AddWeapon(GeneralArmory.Weapons[9]);
             Players[2].Spaceship.AddWeapon(GeneralArmory.Weapons[15]);

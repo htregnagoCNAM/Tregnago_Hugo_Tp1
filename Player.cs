@@ -22,6 +22,7 @@ namespace Tregnago_Hugo_Tp1
             Spaceship = new Spaceship();
             Name = $"{FirstName} {LastName}";
         }
+
         public static string FormatName(string name)
         {
             if (name.Length == 0)
@@ -34,10 +35,7 @@ namespace Tregnago_Hugo_Tp1
         {
             return $"{Alias} ({Name})";
         }
-        public void AssignSpaceship(Spaceship spaceship)
-        {
-            Spaceship = spaceship;
-        }
+
         public override bool Equals(object? obj)
         {
             if (obj == null || GetType() != obj.GetType())

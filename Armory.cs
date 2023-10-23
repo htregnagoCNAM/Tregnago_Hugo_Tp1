@@ -9,11 +9,13 @@ namespace Tregnago_Hugo_Tp1
     public class Armory
     {
         public List<Weapon> Weapons { get; set; }
+
         public Armory()
         {
             Weapons = new List<Weapon>();
             Init();
         }
+
         private void Init()
         {
             //Based on Worms weapons
@@ -36,6 +38,7 @@ namespace Tregnago_Hugo_Tp1
             Weapons.Add(new Weapon("Bunker Buster", 25, 40, EWeaponType.Guided));
             Weapons.Add(new Weapon("Concrete Donkey", 70, 100, EWeaponType.Explosive));
         }
+
         public void ViewArmory()
         {
             Console.WriteLine("*-*-*-*-*-*-*-*");
@@ -64,6 +67,17 @@ namespace Tregnago_Hugo_Tp1
             foreach (var weapon in Weapons)
             {
                 if (weapon.WeaponType == EWeaponType.Explosive)
+                    ViewDetailedWeapon(weapon);
+            }
+            Console.WriteLine("*-*-*-*-*-*-*-*");
+        }
+        public void ViewGuidedWeapons()
+        {
+            Console.WriteLine("*-*-*-*-*-*-*-*");
+            Console.WriteLine("Detailed list of armory guided weapons:");
+            foreach (var weapon in Weapons)
+            {
+                if (weapon.WeaponType == EWeaponType.Guided)
                     ViewDetailedWeapon(weapon);
             }
             Console.WriteLine("*-*-*-*-*-*-*-*");
