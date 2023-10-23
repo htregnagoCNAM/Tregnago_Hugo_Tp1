@@ -26,9 +26,9 @@ namespace Tregnago_Hugo_Tp1
                 return false;
 
             Weapon otherWeapon = (Weapon)obj;
-            return Name == otherWeapon.Name ||
-                MinDamage == otherWeapon.MinDamage ||
-                MaxDamage == otherWeapon.MaxDamage ||
+            return Name == otherWeapon.Name &&
+                MinDamage == otherWeapon.MinDamage &&
+                MaxDamage == otherWeapon.MaxDamage &&
                 WeaponType == otherWeapon.WeaponType;
         }
     }
